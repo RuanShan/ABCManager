@@ -1,6 +1,6 @@
-class Shop < ActiveRecord::Migration
+class CreateShops < ActiveRecord::Migration
   def self.up
-    create_table :shops do |t|
+    create_table :shops, :options=>'ENGINE=InnoDB DEFAULT CHARSET=utf8', :force=>true do |t|
       t.string :name,  :limit => 20*4,     :null => false, :default => ""
       t.string :url
       t.string :owner,  :limit => 10*4,     :null => false, :default => "" # owner name
